@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mwalimu Smart | Professional Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>MwalimuSmart</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
+                <a href="#" class="nav-link"><i class="bi bi-journal-plus"></i> Lesson Plan</a>
+                <a href="#" class="nav-link"><i class="bi bi-person-check"></i> Attendance</a>
+                <a href="#" class="nav-link"><i class="bi bi-people"></i> Students</a>
+                <a href="#" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Notes</a>
+            </nav>
+            <div class="nav-footer">
+                <a href="login.html" class="nav-link logout"><i class="bi bi-box-arrow-left"></i> Logout</a>
+            </div>
+        </aside>
+
+
+<!--===============================MAIN CONTENT====================================================-->
+        <main class="content">
+            <header class="top-nav">
+                <div class="search-bar">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search students or lessons...">
+                </div>
+                <div class="header-user">
+                    <i class="bi bi-bell"></i>
+                    <div class="user-info">
+                        <span>Mwl. Kulwa M.A</span>
+                    </div>
+                    <div class="avatar">MK</div>
+                </div>
+            </header>
+
+<!--==================================CARDS==================================================-->
+            <div class="dashboard-grid">
+                <div class="card highlight-card">
+                    <div class="teacher-promo">
+                        <div class="text">
+                            <h3>Ready to teach, Mwalimu?</h3>
+                            <p>You have 2 periods today.</p>
+                            <button class="btn-primary-outline">View Schedule</button>
+                        </div>
+                        <i class="bi bi-stars promo-icon"></i>
+                    </div>
+                </div>
+
+                <div class="card stat-mini">
+                    <div class="stat-header">
+                        <i class="bi bi-people-fill icon-m"></i>
+                        <span class="trend up">+2%</span>
+                    </div>
+                    <h4>97</h4>
+                    <p>Total Students</p>
+                </div>
+
+                <div class="card stat-mini">
+                    <div class="stat-header">
+                        <i class="bi bi-check-circle-fill icon-m"></i>
+                        <span class="trend">Stable</span>
+                    </div>
+                    <h4>15</h4>
+                    <p>Lessons Prepared</p>
+                </div>
+
+                <div class="card data-table-card">
+                    <div class="card-title">
+                        <h4>Recent Attendance</h4>
+                        <button class="btn-text">View All</button>
+                    </div>
+                    <table class="simple-table">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Amani Bakari</td>
+                                <td>Standard 4</td>
+                                <td><span class="badge present">Present</span></td>
+                            </tr>
+                            <tr>
+                                <td>Neema Juma</td>
+                                <td>Standard 4</td>
+                                <td><span class="badge absent">Absent</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card action-widget">
+                    <h4>Quick Actions</h4>
+                    <div class="action-list">
+                        <button class="action-item"><i class="bi bi-file-earmark-plus"></i> New Andalio</button>
+                        <button class="action-item"><i class="bi bi-printer"></i> Print Register</button>
+                        <button class="action-item"><i class="bi bi-send"></i> Message Parents</button>
+                    </div>
+                </div>
+
+                
+<!--==============================CALENDER CARD=========================-->
+
+    <div class="calendar-box">
+
+    <div class="calendar-header">
+        <button id="prevBtn" class="nav-btn">&#10094;</button>
+        <h3 id="monthYear"></h3>
+        <button id="nextBtn" class="nav-btn">&#10095;</button>
+    </div>
+
+    <div class="calendar-weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+    </div>
+
+    <div id="calendarGrid" class="calendar-grid"></div>
+
+</div>
+    <!--==============================CALENDER CARD ENDS=========================-->
+</div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

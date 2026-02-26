@@ -1,0 +1,176 @@
+:root {
+    --maroon: #800000;
+    --maroon-soft: #fdf2f2;
+    --white: #ffffff;
+    --bg: #f3f4f6;
+    --text: #1f2937;
+    --gray: #9ca3af;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui; }
+
+.app-container { display: flex; background: var(--bg); min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+    width: 240px; background: var(--white);
+    display: flex; flex-direction: column; padding: 25px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 800; color: var(--maroon); margin-bottom: 40px;
+}
+
+.nav-link {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px; color: var(--text); text-decoration: none;
+    border-radius: 10px; margin-bottom: 5px; transition: 0.3s;
+}
+
+.nav-link.active { background: var(--maroon); color: var(--white); }
+.nav-link:hover:not(.active) { background: var(--maroon-soft); color: var(--maroon); }
+.logout { margin-top: auto; color: #ef4444; }
+
+/* Main Content Area */
+.content { flex: 1; padding: 30px; }
+
+.top-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    background: var(--white); padding: 10px 20px;
+    border-radius: 12px; border: 1px solid #e5e7eb; display: flex; align-items: center; gap: 10px; width: 300px;
+}
+
+.search-bar input { border: none; outline: none; width: 100%; }
+
+.header-user { display: flex; align-items: center; gap: 20px; }
+.user-info { text-align: right; }
+.avatar { 
+    width: 40px; height: 40px; background: var(--maroon); 
+    color: white; border-radius: 10px; display: grid; place-items: center; font-weight: bold;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.card { background: var(--white); padding: 25px; border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+
+/* Custom Widget Styles */
+.highlight-card { background: var(--maroon); color: white; grid-column: span 1; }
+.promo-icon { font-size: 3rem; opacity: 0.2; }
+.btn-primary-outline { 
+    background: transparent; border: 1px solid white; color: white; 
+    padding: 8px 15px; border-radius: 8px; cursor: pointer; margin-top: 15px;
+}
+
+.icon-m { color: var(--maroon); font-size: 1.5rem; }
+.trend { font-size: 0.8rem; font-weight: bold; padding: 4px 8px; border-radius: 5px; background: #ecfdf5; color: #10b981; }
+
+.data-table-card { grid-column: span 2; }
+.simple-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+.simple-table th { text-align: left; color: var(--gray); font-size: 0.8rem; padding-bottom: 10px; }
+.simple-table td { padding: 12px 0; border-top: 1px solid #f3f4f6; font-size: 0.9rem; }
+
+.badge { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; }
+.present { background: #d1fae5; color: #065f46; }
+.absent { background: #fee2e2; color: #991b1b; }
+
+.action-list { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.action-item { 
+    width: 100%; padding: 12px; border: 1px solid #e5e7eb; border-radius: 10px;
+    background: var(--white); text-align: left; display: flex; gap: 10px; cursor: pointer; transition: 0.2s;
+}
+.action-item:hover { border-color: var(--maroon); color: var(--maroon); }
+
+
+
+
+/* ============== PROFESSIONAL NAVIGABLE CALENDAR =========== */
+
+.calendar-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    max-width: 420px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background: #f2f2f2;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.calendar-grid {
+    gap: 6px;
+}
+
+.calendar-grid div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.calendar-grid div:hover {
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+.other-month {
+    color: #ccc;
+}
+
+.today {
+    background: #7b1113;
+    color: white;
+    font-weight: 600;
+}

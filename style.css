@@ -1,0 +1,171 @@
+:root {
+    --maroon: #7b1113;
+    --maroon-light: #a4161a;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-wrapper {
+    width: 90%;
+    max-width: 900px;
+    background: var(--white);
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Left Panel */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-left h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* Right Panel */
+.auth-right {
+    flex: 1;
+    padding: 60px 40px;
+}
+
+.auth-form h2 {
+    margin-bottom: 30px;
+    color: var(--maroon);
+}
+
+/* Floating Inputs */
+.floating-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.floating-group input {
+    width: 100%;
+    padding: 12px 40px 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    background: transparent;
+}
+
+.floating-group label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.floating-group input:focus + label,
+.floating-group input:valid + label {
+    top: -8px;
+    left: 8px;
+    background: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: var(--maroon);
+}
+
+.floating-group i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: var(--maroon);
+    cursor: pointer;
+}
+
+/* Button */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--maroon);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: var(--maroon-light);
+    transform: translateY(-2px);
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.switch-text a {
+    color: var(--maroon);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .auth-wrapper {
+        flex-direction: column;
+    }
+    .auth-left {
+        display: none;
+    }
+}
+
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day {
+    height: 40px; /* Force a height so they aren't squashed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333 !important; /* Force Black text for numbers */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+/* Today's Date - High Contrast */
+.day.today {
+    background-color: #800000 !important; /* Maroon */
+    color: #ffffff !important; /* White number */
+}
+
+/* Faded numbers for other months */
+.prev-date, .next-date {
+    color: #ccc !important;
+}

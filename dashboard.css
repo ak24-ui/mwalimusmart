@@ -173,4 +173,132 @@
     background: #7b1113;
     color: white;
     font-weight: 600;
+
+}
+
+
+/* ===== DASHBOARD GRID ===== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* CARD STYLING */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* CALENDAR */
+.calendar-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.nav-btn:hover {
+    background: #f2f2f2;
+}
+
+/* Weekdays and grid */
+.calendar-weekdays, .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.calendar-grid div {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.calendar-grid div:hover {
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+.today {
+    background: #7b1113;
+    color: white;
+    font-weight: 600;
+}
+
+.other-month {
+    color: #ccc;
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .calendar-grid div {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid div {
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 10px;
+    }
 }

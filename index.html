@@ -10,6 +10,7 @@
 <body>
 
     <div class="app-container">
+        <!-- ======================= SIDEBAR ======================= -->
         <aside class="sidebar">
             <div class="logo">
                 <i class="bi bi-mortarboard-fill"></i>
@@ -27,8 +28,7 @@
             </div>
         </aside>
 
-
-<!--===============================MAIN CONTENT====================================================-->
+        <!-- ======================= MAIN CONTENT ======================= -->
         <main class="content">
             <header class="top-nav">
                 <div class="search-bar">
@@ -44,8 +44,10 @@
                 </div>
             </header>
 
-<!--==================================CARDS==================================================-->
+            <!-- ======================= DASHBOARD GRID ======================= -->
             <div class="dashboard-grid">
+
+                <!-- Highlight card -->
                 <div class="card highlight-card">
                     <div class="teacher-promo">
                         <div class="text">
@@ -57,6 +59,7 @@
                     </div>
                 </div>
 
+                <!-- Stats -->
                 <div class="card stat-mini">
                     <div class="stat-header">
                         <i class="bi bi-people-fill icon-m"></i>
@@ -75,6 +78,7 @@
                     <p>Lessons Prepared</p>
                 </div>
 
+                <!-- Attendance Table -->
                 <div class="card data-table-card">
                     <div class="card-title">
                         <h4>Recent Attendance</h4>
@@ -103,6 +107,7 @@
                     </table>
                 </div>
 
+                <!-- Quick Actions -->
                 <div class="card action-widget">
                     <h4>Quick Actions</h4>
                     <div class="action-list">
@@ -112,112 +117,33 @@
                     </div>
                 </div>
 
-                
-<!--==============================CALENDER CARD=========================-->
+                <!-- ======================= CALENDAR ======================= -->
+                <div class="calendar-box">
+                    <div class="calendar-header">
+                        <button id="prevBtn" class="nav-btn">&#10094;</button>
+                        <h3 id="monthYear"></h3>
+                        <button id="nextBtn" class="nav-btn">&#10095;</button>
+                    </div>
 
-    <div class="calendar-box">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
 
-    <div class="calendar-header">
-        <button id="prevBtn" class="nav-btn">&#10094;</button>
-        <h3 id="monthYear"></h3>
-        <button id="nextBtn" class="nav-btn">&#10095;</button>
-    </div>
+                    <div id="calendarGrid" class="calendar-grid"></div>
+                </div>
+                <!-- ======================= CALENDAR ENDS ======================= -->
 
-    <div class="calendar-weekdays">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-    </div>
-
-    <div id="calendarGrid" class="calendar-grid"></div>
-
-</div>
-    <!--==============================CALENDER CARD ENDS=========================-->
-</div>
             </div>
         </main>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- ======================= SCRIPT ======================= -->
     <script src="script.js"></script>
 </body>
 </html>
